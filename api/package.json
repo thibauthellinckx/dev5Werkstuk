@@ -1,0 +1,31 @@
+{
+  "name": "dev5Wekstuk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon --legacy-watch src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thibauthellinckx/dev5Werkstuk"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thibauthellinckx/dev5Werkstuk/issues"
+  },
+  "homepage": "https://github.com/thibauthellinckx/dev5Werkstuk#readme",
+  "dependencies": {
+    "docker": "^1.0.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jest": "^27.3.1",
+    "knex": "^0.95.14",
+    "nodemon": "^2.0.14",
+    "pg": "^8.7.1",
+    "supertest": "^6.1.6",
+    "task": "^1.3.2"
+  }
+}
