@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  api:
+    build: ./api
+    image: thibaut/api_dev5werkstuk:0.1
+    ports:
+      - 80:${PORT}
+    volumes:
+      - ./api/src:/usr/app/src
+    depends_on:
+      - pg
+    environment:
+      PORT:
+      POSTGRES_USER:
+      POSTGRES_PASSWORD:
+      POSTGRES_DATABASE:
+      POSTGRES_CONNECTION:
+      POSTGRES_HOST: pg
+
+  pg:
+    image: "postgres:latest"
+    ports: 
+      - 5432:5432
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DATABASE
+      - POSTGRES_CONNECTION
+    volumes:
+      - /var/lib/postgresql/data
