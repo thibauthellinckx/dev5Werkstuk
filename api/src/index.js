@@ -163,7 +163,6 @@ server.post('/players', (req, res) => {
     }
 });
 
-//Listening f
 server.listen(PORT, () => {
 
     console.log(`listening to port ${PORT}`);
